@@ -3,11 +3,12 @@
 client_id = "8bc27009702f6cf9409b741e8390d40a"
 name = "test-render-kit-customization"
 handle = "test-render-kit-customization"
-application_url = "https://example.com/"
+application_url = "https://monica-mrs-packets-nottingham.trycloudflare.com"
 embedded = true
 
 [build]
 include_config_on_deploy = true
+automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2025-04"
@@ -25,7 +26,7 @@ api_version = "2025-04"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = ["https://monica-mrs-packets-nottingham.trycloudflare.com/auth/callback", "https://monica-mrs-packets-nottingham.trycloudflare.com/auth/shopify/callback", "https://monica-mrs-packets-nottingham.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false
