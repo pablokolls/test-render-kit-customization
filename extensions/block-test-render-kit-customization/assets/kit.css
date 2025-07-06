@@ -1,0 +1,41 @@
+/* Only global CSS for Kit Layout */
+/* Exclusive component CSS needs to be into <style> tag in the snippet file */
+
+.kit-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.kit-container-customization {
+    width: 100%;
+    min-width: 450px;
+}
+
+.kit-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.kit-section-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.kit-section-header {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.kit-section-header h2,h3 {
+    font-size: x-large;
+}
+
+.kit-section-header h4 {
+    font-size: large;
+}

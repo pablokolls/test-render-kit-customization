@@ -1,0 +1,13 @@
+{% assign competitions = 'La Liga,UCL,Europa League' | split: ',' %}
+
+<div class="kit-section">
+  <div class="kit-section-header">
+    <h4>{{ 'customization.competition.title' | t }}</h4>
+    {% render 'component-price', value: '+00€' %}
+  </div>
+  <div>
+    {% for competition in competitions %}
+      {% render 'component-radio', name: competition, value: competition, title: competition, active: true, disabled: false %}
+    {% endfor %}
+  </div>
+</div>

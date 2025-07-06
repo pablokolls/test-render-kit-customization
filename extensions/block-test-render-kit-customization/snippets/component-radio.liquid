@@ -1,0 +1,50 @@
+<style>
+  .radio-option {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 4px;
+  }
+
+  .radio-option input {
+    display: none;
+  }
+
+  .radio-option span {
+    padding: 8px 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    color: #333;
+    transition: all 0.2s;
+  }
+
+  .radio-option.is-active span {
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .radio-option.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+</style>
+
+<label class="radio-option {% if disabled %}is-disabled{% endif %} {% if active %}is-active{% endif %}">
+  <input
+    type="radio"
+    name="{{ name }}"
+    value="{{ value }}"
+    {% if active %}
+      checked
+    {% endif %}
+    {% if disabled %}
+      disabled
+    {% endif %}
+  >
+    {% if icon != blank %}
+      {% comment %} Pending add Icon {% endcomment %}
+    {% endif %}
+  <span>{{ title }}</span>
+</label>

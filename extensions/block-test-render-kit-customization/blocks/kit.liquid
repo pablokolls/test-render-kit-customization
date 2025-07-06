@@ -1,0 +1,24 @@
+{{ 'kit.css' | asset_url | stylesheet_tag }}
+
+<div>
+  <h2>{{ 'customization.title' | t }}</h2>
+  <div class="kit-container">
+    {% render 'kit-media' %}
+    <div class="kit-container-customization">
+      {% render 'kit-equipment' %}
+      {% render 'kit-gender' %}
+      {% render 'kit-sizes' %}
+      {% render 'kit-personalization' %}
+      {% render 'kit-competition' %}
+      {% render 'kit-add-to-cart' %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Kit",
+  "target": "section",
+  "settings": []
+}
+{% endschema %}

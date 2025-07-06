@@ -1,0 +1,18 @@
+<div class="kit-section">
+  <div class="kit-section-header">
+    <h4>{{ 'customization.personalization.title' | t }}</h4>
+    {% render 'component-price', value: '+20€' %}
+  </div>
+  <div class="kit-tabs">
+    <button class="kit-customization-tab">
+      {{ 'customization.personalization.tabs.player.title' | t }}
+    </button>
+    <button>
+      {{ 'customization.personalization.tabs.custom.title' | t }}
+    </button>
+  </div>
+  <div class="kit-tab-content">
+    {% render 'kit-tab-player' %}
+    {% render 'kit-tab-custom' %}
+  </div>
+</div>

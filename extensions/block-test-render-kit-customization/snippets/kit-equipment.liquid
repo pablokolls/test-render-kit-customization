@@ -1,0 +1,14 @@
+{% comment %} Pending Mock Equipments {% endcomment %}
+{% assign equipments = '[]' %}
+
+<div class="kit-section">
+  <div class="kit-section-header">
+    <h3>{{ 'customization.products.title' | t }}</h3>
+    {% render 'component-price', value: '119,99€' %}
+  </div>
+  <div>
+    {% for item in equipments %}
+      {% render 'kit-equipment-item' %}
+    {% endfor %}
+  </div>
+</div>

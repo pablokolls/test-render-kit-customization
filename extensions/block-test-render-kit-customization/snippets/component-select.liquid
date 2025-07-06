@@ -1,0 +1,52 @@
+<style>
+  .select-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .select-input {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    transition: border-color 0.2s;
+  }
+
+  .select-input:focus {
+    border-color: #000;
+    outline: none;
+  }
+
+  .select-input:disabled {
+    background-color: #f4f4f4;
+    color: #888;
+    cursor: not-allowed;
+  }
+</style>
+
+<select
+  name="{{ name }}"
+  id="{{ name }}"
+  class="select-input"
+  {% if disabled %}
+    disabled
+  {% endif %}
+>
+  {% if default != blank %}
+    <option value="{{ default }}" {% if default == selected %} selected {% endif %}> {{ default }} </option>
+  {% endif %}
+  {% for option in options %}
+    <option
+      value="{{ option }}"
+      {% if option == selected %}
+        selected
+      {% endif %}
+    >
+      {{ option }}
+    </option>
+  {% endfor %}
+</select>

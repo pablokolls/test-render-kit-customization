@@ -3,7 +3,7 @@
 client_id = "8bc27009702f6cf9409b741e8390d40a"
 name = "test-render-kit-customization"
 handle = "test-render-kit-customization"
-application_url = "https://monica-mrs-packets-nottingham.trycloudflare.com"
+application_url = "https://severe-fell-wings-furniture.trycloudflare.com"
 embedded = true
 
 [build]
@@ -26,7 +26,7 @@ api_version = "2025-04"
 scopes = "write_products"
 
 [auth]
-redirect_urls = ["https://monica-mrs-packets-nottingham.trycloudflare.com/auth/callback", "https://monica-mrs-packets-nottingham.trycloudflare.com/auth/shopify/callback", "https://monica-mrs-packets-nottingham.trycloudflare.com/api/auth/callback"]
+redirect_urls = ["https://severe-fell-wings-furniture.trycloudflare.com/auth/callback", "https://severe-fell-wings-furniture.trycloudflare.com/auth/shopify/callback", "https://severe-fell-wings-furniture.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false

@@ -1,0 +1,7 @@
+{% assign genders = "Hombre,Mujer,Niño/a,Bebe" | split: ',' %}
+
+<div class="kit-section-row">
+    {% for gender in genders %}
+        {% render 'component-radio', name: gender, value: gender, title: gender, active: true, disabled: false %}
+    {% endfor %}
+</div>
